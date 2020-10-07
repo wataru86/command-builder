@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -11,17 +11,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -33,6 +22,87 @@
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(4800deg);
   }
+}
+
+.App-form {
+  position: relative;
+  margin: 0 auto; 
+  width: 70%;
+}
+.App-form input[type='text'] {
+  font: 30px/48px sans-serif;
+  font-family: 'Consolas','Courier New','Courier',sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+  letter-spacing: 1px;
+  padding-left: 1em;
+}
+.App-form input[type='text']:focus {
+	outline: none;
+}
+.App-input {
+	padding: 4px 0;
+	border: 0;
+	border-bottom: 1px solid #1b2538;
+	background-color: transparent;
+}
+.App-input ~ .focus_line {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	transition: 0.4s;
+	background-color: #61dafb;
+}
+.App-input:focus ~ .focus_line,
+.App-form.App-input ~ .focus_line {
+	width: 100%;
+	transition: 0.4s;
+}
+.App-input ~ label {
+  text-align: left;
+  font: 30px/48px sans-serif;
+  font-family: 'Consolas','Courier New','Courier',sans-serif;
+	position: absolute;
+	z-index: -1;
+	top: 4px;
+	left: 0;
+	width: 100%;
+	transition: 0.3s;
+	letter-spacing: 0.5px;
+	color: #aaaaaa;
+}
+
+ul, ol {
+  padding: 0;
+  position: relative;
+}
+
+ul li, ol li {
+  font: 30px/48px sans-serif;
+  font-family: 'Consolas','Courier New','Courier',sans-serif;
+  color: #1b2538;
+  background: #f1f8ff;/*背景色*/
+  margin-bottom: 10px;/*下のバーとの余白*/
+  line-height: 1.5;
+  padding: 0.2em;
+  list-style-type: none!important;/*ポチ消す*/
+  position: relative;
+  margin: 10px auto; 
+  width: 70%;
+}
+
+.App-header {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  font: 30px/48px sans-serif;
+  font-family: 'Consolas','Courier New','Courier',sans-serif;
 }
